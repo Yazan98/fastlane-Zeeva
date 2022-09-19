@@ -1,11 +1,46 @@
 require 'fastlane/action'
+require 'discordrb'
 require_relative '../helper/zeeva_discord_helper'
 
 module Fastlane
   module Actions
     class ZeevaDiscordAction < Action
       def self.run(params)
-        UI.message("The zeeva_discord plugin is working!")
+        serverToken = params[:server_token]
+        applicationId = params[:client_id]
+        channelId = params[:channel_id]
+        buildName = params[:build_name]
+        buildType = params[:build_type]
+        platformCode = params[:platform_code]
+        buildContent = "Read From File"
+
+        UI.message("Zeeva Fastlane Plugin - Discord Configuration - Started !!")
+        UI.message("=========================== Bot Credentials ===========================")
+        UI.message("Channel Id : " + channelId)
+        UI.message("Application Id : " + applicationId)
+        UI.message("Server Token : " + serverToken)
+        UI.message("=======================================================================")
+        run_application_bot(serverToken, applicationId, channelId, get_message_body(buildName, buildType, platformCode, buildContent))
+      end
+
+      def self.get_message_body(buildName, buildType, platform, buildContent)
+        return "====== New Build ======" +
+          "\n" +
+          "Build Name : " +
+          buildName + "\n" +
+          "Build Type : " + buildType +
+          "\n" + "Platform : " + platform + "\n" +
+          "Build Content : " + buildContent +
+          "\n" +
+          "====== New Build ======"
+      end
+
+      def self.run_application_bot(token, appId, channelId, messageBody)
+        bot = Discordrb::Bot.new token: token, client_id: appId
+        bot.send_message(channelId, messageBody)
+
+        # Enable this Line if you want to Stream the Connection
+        # bot.run
       end
 
       def self.description
@@ -27,19 +62,53 @@ module Fastlane
 
       def self.available_options
         [
-          # FastlaneCore::ConfigItem.new(key: :your_option,
-          #                         env_name: "ZEEVA_DISCORD_YOUR_OPTION",
-          #                      description: "A description of your option",
-          #                         optional: false,
-          #                             type: String)
+          FastlaneCore::ConfigItem.new(
+            key: :server_token,
+            env_name: "SERVER_TOKEN",
+            description: "The Private Current Server Token",
+            optional: false,
+            type: String
+          ),
+          FastlaneCore::ConfigItem.new(
+            key: :client_id,
+            env_name: "CLIENT_ID",
+            description: "The Client ID for Your Bot",
+            optional: false,
+            type: String
+          ),
+          FastlaneCore::ConfigItem.new(
+            key: :channel_id,
+            env_name: "CHANNEL_ID",
+            description: "The Target Channel ID The Bot Will Send the Message on",
+            optional: false,
+            type: String
+          ),
+          FastlaneCore::ConfigItem.new(
+            key: :build_name,
+            env_name: "BUILD_NAME",
+            description: "The Build Name that Currently Running",
+            optional: false,
+            type: String
+          ),
+          FastlaneCore::ConfigItem.new(
+            key: :build_type,
+            env_name: "BUILD_TYPE",
+            description: "The Build Type that Currently Running",
+            optional: false,
+            type: String
+          ),
+          FastlaneCore::ConfigItem.new(
+            key: :platform_code,
+            env_name: "PLATFORM_CODE",
+            description: "The Platform that Currently Running Ex: Android, IOS, Mac",
+            optional: false,
+            type: String
+          )
         ]
       end
 
       def self.is_supported?(platform)
-        # Adjust this if your plugin only works for a particular platform (iOS vs. Android, for example)
-        # See: https://docs.fastlane.tools/advanced/#control-configuration-by-lane-and-by-platform
-        #
-        # [:ios, :mac, :android].include?(platform)
+        [:ios, :mac, :android].include?(platform)
         true
       end
     end

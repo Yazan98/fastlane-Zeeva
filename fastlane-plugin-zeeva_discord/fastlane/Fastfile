@@ -1,3 +1,10 @@
 lane :test do
-  zeeva_discord
+  zeeva_discord(
+    server_token: "",
+    client_id: "",
+    channel_id: "",
+    build_name: "Android Production Build",
+    platform_code: "Android",
+    build_type: "Debuggable Build"
+  )
 end
