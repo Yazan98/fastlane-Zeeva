@@ -12,7 +12,9 @@ module Fastlane
         buildName = params[:build_name]
         buildType = params[:build_type]
         platformCode = params[:platform_code]
-        buildContent = "Read From File"
+
+        file_content = File.read('zeevaBuild.md');
+        buildContent = file_content
 
         UI.message("Zeeva Fastlane Plugin - Discord Configuration - Started !!")
         UI.message("=========================== Bot Credentials ===========================")
