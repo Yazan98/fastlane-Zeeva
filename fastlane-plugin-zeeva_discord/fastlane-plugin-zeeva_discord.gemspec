@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'yazantarifi989@gmail.com'
 
   spec.summary       = 'Fastlane Plugin to Send Messages about Builds from Android, IOS Applications Via Fastlane'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-zeeva_discord"
+  spec.homepage      = "https://github.com/Yazan98/Zeeva/tree/main/fastlane-plugin-zeeva_discord"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
