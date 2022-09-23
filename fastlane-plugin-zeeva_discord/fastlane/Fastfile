@@ -1,8 +1,8 @@
 lane :test do
   zeeva_discord(
-    server_token: "MTAwMTgwMzA4NDk1NzIyMDk3NQ.GcsOxE.bBg8nwFJbxF1q2lF6Uoyo3QukzzCon0-nmAH54",
-       client_id: "1001803084957220975",
-       channel_id: "1021472534237020180",
+    server_token: "",
+    client_id: "",
+    channel_id: "",
     build_name: "Android Production Build",
     platform_code: "Android",
     build_type: "Debuggable Build",
