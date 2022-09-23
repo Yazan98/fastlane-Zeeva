@@ -13,7 +13,9 @@ lane :test do
     channel_id: "",
     build_name: "Android Production Build",
     platform_code: "Android",
-    build_type: "Debuggable Build"
+    build_type: "Debuggable Build",
+    title: "This is the Message Title",
+    message: "This is the Message Body"
   )
 end
 ```
