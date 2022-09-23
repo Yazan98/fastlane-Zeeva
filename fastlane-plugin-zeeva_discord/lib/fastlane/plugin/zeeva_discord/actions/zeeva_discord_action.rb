@@ -16,9 +16,15 @@ module Fastlane
         message = params[:message]
 
         buildContent = ""
+
         begin
-          file_content = File.read('zeevaBuild.md');
-          buildContent = file_content
+          File.open 'zeevaBuild.md' do |f|
+            file_content = File.read('zeevaBuild.md');
+            buildContent = file_content
+            # ...
+          end
+        rescue Errno::ENOENT => e
+          $stderr.puts "Caught the exception: #{e}"
         end
 
         UI.message("Zeeva Fastlane Plugin - Discord Configuration - Started !!")
