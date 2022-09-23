@@ -12,9 +12,14 @@ module Fastlane
         buildName = params[:build_name]
         buildType = params[:build_type]
         platformCode = params[:platform_code]
+        title = params[:title]
+        message = params[:message]
 
-        file_content = File.read('zeevaBuild.md');
-        buildContent = file_content
+        buildContent = ""
+        begin
+          file_content = File.read('zeevaBuild.md');
+          buildContent = file_content
+        end
 
         UI.message("Zeeva Fastlane Plugin - Discord Configuration - Started !!")
         UI.message("=========================== Bot Credentials ===========================")
@@ -22,19 +27,37 @@ module Fastlane
         UI.message("Application Id : " + applicationId)
         UI.message("Server Token : " + serverToken)
         UI.message("=======================================================================")
-        run_application_bot(serverToken, applicationId, channelId, get_message_body(buildName, buildType, platformCode, buildContent))
+        run_application_bot(serverToken, applicationId, channelId, get_message_body(
+          buildName,
+          buildType,
+          platformCode,
+          buildContent,
+          title,
+          message
+        ))
       end
 
-      def self.get_message_body(buildName, buildType, platform, buildContent)
-        return "====== New Build ======" +
-          "\n" +
-          "Build Name : " +
-          buildName + "\n" +
-          "Build Type : " + buildType +
-          "\n" + "Platform : " + platform + "\n" +
-          "Build Content : " + buildContent +
-          "\n" +
-          "====== New Build ======"
+      def self.get_message_body(buildName, buildType, platform, buildContent, title, messageContent)
+        message = "====== New Build ======"
+        message += "\n"
+        message += "Build Name : " + buildName + " \n"
+        message += "Build Type : " + buildType + " \n"
+        message += "Build Platform : " + platform + " \n"
+        if buildContent.length != 0
+          message += "Build Content : " + " \n"
+          message += buildContent + " \n"
+        end
+
+        if title.length != 0
+          message += "Title : " + title + " \n"
+        end
+
+        if messageContent.length != 0
+          message += "Message : " + messageContent + " \n"
+        end
+
+        message += "====== New Build ======"
+        return message
       end
 
       def self.run_application_bot(token, appId, channelId, messageBody)
@@ -103,6 +126,20 @@ module Fastlane
             key: :platform_code,
             env_name: "PLATFORM_CODE",
             description: "The Platform that Currently Running Ex: Android, IOS, Mac",
+            optional: false,
+            type: String
+          ),
+          FastlaneCore::ConfigItem.new(
+            key: :title,
+            env_name: "TITLE",
+            description: "The Title of the Build",
+            optional: false,
+            type: String
+          ),
+          FastlaneCore::ConfigItem.new(
+            key: :message,
+            env_name: "MESSAGE",
+            description: "The Message Body of the Build",
             optional: false,
             type: String
           )
