@@ -1,3 +1,11 @@
 lane :test do
-  zeeva_telegram
+  zeeva_telegram(
+    server_token: "",
+    build_name: "Android Production Build",
+    platform_code: "Android",
+    build_type: "Debuggable Build",
+    title: "Title Here",
+    message: "Message Here",
+    chat_id: ""
+  )
 end

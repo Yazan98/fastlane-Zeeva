@@ -12,6 +12,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="CFPropertyList (v3.0.5, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actionpack (v7.0.4, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actionview (v7.0.4, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activesupport (v7.0.4, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.1, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="artifactory (v3.0.15, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ast (v2.4.2, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
@@ -23,12 +26,15 @@
     <orderEntry type="library" scope="PROVIDED" name="aws-sdk-s3 (v1.114.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="aws-sigv4 (v1.5.1, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="babosa (v1.0.4, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v2.3.7, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="claide (v1.1.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coderay (v1.1.3, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="colored (v1.2, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="colored2 (v3.1.2, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="commander (v4.6.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.1.10, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="declarative (v0.0.20, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.5.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="digest-crc (v0.6.4, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
@@ -36,6 +42,7 @@
     <orderEntry type="library" scope="PROVIDED" name="domain_name (v0.5.20190701, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="dotenv (v2.8.1, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="emoji_regex (v3.2.3, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="erubi (v1.11.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="excon (v0.92.4, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faraday (v1.10.2, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faraday-cookie_jar (v0.0.7, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
@@ -66,17 +73,21 @@
     <orderEntry type="library" scope="PROVIDED" name="highline (v2.0.3, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="http-cookie (v1.0.5, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="httpclient (v2.8.3, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="i18n (v1.12.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jmespath (v1.6.1, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v2.6.2, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jwt (v2.5.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="loofah (v2.19.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="memoist (v0.16.2, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="method_source (v1.0.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_magick (v4.11.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.1.2, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.16.3, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.15.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multipart-post (v2.0.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nanaimo (v0.3.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="naturally (v2.2.1, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.13.8, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="optparse (v0.1.1, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="os (v1.1.4, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="parallel (v1.22.1, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
@@ -84,6 +95,11 @@
     <orderEntry type="library" scope="PROVIDED" name="plist (v3.6.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry (v0.14.1, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="public_suffix (v5.0.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="racc (v1.6.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack (v2.2.4, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-test (v2.0.2, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v2.0.3, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.4.3, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rainbow (v3.1.1, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.6, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.5.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
@@ -109,12 +125,14 @@
     <orderEntry type="library" scope="PROVIDED" name="simplecov (v0.21.2, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simplecov-html (v0.12.3, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simplecov_json_formatter (v0.1.4, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="telegram-bot (v0.15.6, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="terminal-notifier (v2.0.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="terminal-table (v1.8.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="trailblazer-option (v0.1.2, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tty-cursor (v0.7.1, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tty-screen (v0.8.1, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tty-spinner (v0.9.3, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tzinfo (v2.0.5, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uber (v0.1.0, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unf (v0.1.4, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unf_ext (v0.0.8.2, RVM: ruby-3.1.2 [global]) [gem]" level="application" />
