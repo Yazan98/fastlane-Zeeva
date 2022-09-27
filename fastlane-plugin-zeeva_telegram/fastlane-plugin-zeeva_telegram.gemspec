@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'yazantarifi989@gmail.com'
 
   spec.summary       = 'Telegram Bot Plugin to Send Build Messages for Android, IOS'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-zeeva_telegram"
+  spec.homepage      = "https://github.com/Yazan98/Zeeva"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
