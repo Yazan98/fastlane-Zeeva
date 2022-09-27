@@ -45,22 +45,21 @@ module Fastlane
       end
 
       def self.get_message_body(buildName, buildType, platform, buildContent, title, messageContent)
-        message = "====== New Build ====== \n"
-        message += "\n"
-        message += "Build Name : " + buildName + " \n"
-        message += "Build Type : " + buildType + " \n"
-        message += "Build Platform : " + platform + " \n"
+        message = "====== New Build ====== %0A"
+        message += "Build Name : " + buildName + " %0A"
+        message += "Build Type : " + buildType + " %0A"
+        message += "Build Platform : " + platform + " %0A"
         if buildContent.length != 0
-          message += "Build Content : " + " \n"
-          message += buildContent + " \n"
+          message += "Build Content : " + " %0A"
+          message += buildContent + " %0A"
         end
 
         if title.length != 0
-          message += "Title : " + title + " \n"
+          message += "Title : " + title + " %0A"
         end
 
         if messageContent.length != 0
-          message += "Message : " + messageContent + " \n"
+          message += "Message : " + messageContent + " %0A"
         end
 
         message += "====== New Build ======"
